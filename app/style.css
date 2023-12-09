@@ -10,12 +10,9 @@ myAppContainer {
 }
 
 .myAppContainer .notes {
-  margin: auto;
+  margin: 10vh auto;
   width: 400px;
-  position: static;
-  top: 50%;
-  left: 0;
-  right: 0;
+  position: relative;
   text-align: center;
 }
 
