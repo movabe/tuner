@@ -79,10 +79,10 @@ myAppContainer {
   position: absolute;
   left: 0;
   right: 0;
-  top: 40%;
+  top: 10%;
   width: 400px;
   height: 33%;
-  margin: 0 auto 5vh auto;
+  margin: 0 auto 10vh auto;
 }
 
 .myAppContainer .meter-pointer {
