@@ -125,6 +125,7 @@ myAppContainer {
 
 .myAppContainer .frequency-bars {
   position: fixed;
+  left: 0;
   bottom: 0;
 }
 
