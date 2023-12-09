@@ -1,73 +1,21 @@
-.myAppContainer {
+myAppContainer {
+  position: static;
   font-family: sans-serif;
   color: #2c3e50;
   margin: 0;
   width: 100%;
-  height: 100vh;
+  height: 90%;
   cursor: default;
   user-select: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.myAppContainer .meter {
-  width: 400px;
-  height: 33%;
-  margin: 5vh auto 0 auto;
-  position: relative;
-}
-
-.myAppContainer .meter-pointer {
-  width: 2px;
-  height: 100%;
-  background: #2c3e50;
-  transform: rotate(45deg);
-  transform-origin: bottom;
-  transition: transform 0.5s;
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-}
-
-.meter-dot {
-  width: 10px;
-  height: 10px;
-  background: #2c3e50;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.myAppContainer .meter-scale {
-  width: 1px;
-  height: 100%;
-  transform-origin: bottom;
-  transition: transform 0.2s;
-  box-sizing: border-box;
-  border-top: 10px solid;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-}
-
-.myAppContainer .meter-scale-strong {
-  width: 2px;
-  border-top-width: 20px;
-}
-
-.myAppContainer .frequency-bars {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 .myAppContainer .notes {
-  width: 100%;
+  margin: auto;
+  width: 400px;
+  position: static;
+  top: 50%;
+  left: 0;
+  right: 0;
   text-align: center;
 }
 
@@ -86,7 +34,23 @@
 
 .myAppContainer .notes-list {
   overflow: auto;
+  overflow: -moz-scrollbars-none;
   white-space: nowrap;
+  -ms-overflow-style: none;
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0),
+    #fff,
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.myAppContainer .notes-list::-webkit-scrollbar {
+  display: none;
+}
+
+.myAppContainer .note {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .myAppContainer .note span {
@@ -113,6 +77,59 @@
   margin-left: 0.25em;
 }
 
+.myAppContainer .meter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 70%;
+  width: 400px;
+  height: 33%;
+  margin: 0 auto 5vh auto;
+}
+
+.myAppContainer .meter-pointer {
+  width: 2px;
+  height: 100%;
+  background: #2c3e50;
+  transform: rotate(45deg);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  position: absolute;
+  right: 50%;
+}
+
+.meter-dot {
+  width: 10px;
+  height: 10px;
+  background: #2c3e50;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  right: 50%;
+  margin-right: -4px;
+}
+
+.myAppContainer .meter-scale {
+  width: 1px;
+  height: 100%;
+  transform-origin: bottom;
+  transition: transform 0.2s;
+  box-sizing: border-box;
+  border-top: 10px solid;
+  position: absolute;
+  right: 50%;
+}
+
+.myAppContainer .meter-scale-strong {
+  width: 2px;
+  border-top-width: 20px;
+}
+
+.myAppContainer .frequency-bars {
+  position: fixed;
+  bottom: 0;
+}
+
 @media (max-width: 768px) {
   .myAppContainer .meter {
     width: 100%;
@@ -121,4 +138,24 @@
   .myAppContainer .notes {
     width: 100%;
   }
+}
+
+.myAppContainer .swal-button {
+  background: #2c3e50;
+}
+
+.myAppContainer .a4 {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.myAppContainer .a4 span {
+  color: #e74c3c;
+}
+
+.myAppContainer .auto {
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
