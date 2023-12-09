@@ -1,8 +1,4 @@
-html {
-  height: 50%;
-}
-
-body {
+.myAppContainer {
   position: fixed;
   font-family: sans-serif;
   color: #2c3e50;
@@ -13,7 +9,7 @@ body {
   user-select: none;
 }
 
-.notes {
+.myAppContainer .notes {
   margin: auto;
   width: 400px;
   position: fixed;
@@ -23,7 +19,7 @@ body {
   text-align: center;
 }
 
-.note {
+.myAppContainer .note {
   font-size: 90px;
   font-weight: bold;
   position: relative;
@@ -32,11 +28,11 @@ body {
   padding-left: 10px;
 }
 
-.note.active {
+.myAppContainer .note.active {
   color: #e74c3c;
 }
 
-.notes-list {
+.myAppContainer .notes-list {
   overflow: auto;
   overflow: -moz-scrollbars-none;
   white-space: nowrap;
@@ -49,39 +45,39 @@ body {
   );
 }
 
-.notes-list::-webkit-scrollbar {
+.myAppContainer .notes-list::-webkit-scrollbar {
   display: none;
 }
 
-.note {
+.myAppContainer .note {
   -webkit-tap-highlight-color: transparent;
 }
 
-.note span {
+.myAppContainer .note span {
   position: absolute;
   right: 0.25em;
   font-size: 40%;
   font-weight: normal;
 }
 
-.note-sharp {
+.myAppContainer .note-sharp {
   top: 0.3em;
 }
 
-.note-octave {
+.myAppContainer .note-octave {
   bottom: 0.3em;
 }
 
-.frequency {
+.myAppContainer .frequency {
   font-size: 32px;
 }
 
-.frequency span {
+.myAppContainer .frequency span {
   font-size: 50%;
   margin-left: 0.25em;
 }
 
-.meter {
+.myAppContainer .meter {
   position: fixed;
   left: 0;
   right: 0;
@@ -91,7 +87,7 @@ body {
   margin: 0 auto 5vh auto;
 }
 
-.meter-pointer {
+.myAppContainer .meter-pointer {
   width: 2px;
   height: 100%;
   background: #2c3e50;
@@ -113,7 +109,7 @@ body {
   margin-right: -4px;
 }
 
-.meter-scale {
+.myAppContainer .meter-scale {
   width: 1px;
   height: 100%;
   transform-origin: bottom;
@@ -124,41 +120,41 @@ body {
   right: 50%;
 }
 
-.meter-scale-strong {
+.myAppContainer .meter-scale-strong {
   width: 2px;
   border-top-width: 20px;
 }
 
-.frequency-bars {
+.myAppContainer .frequency-bars {
   position: fixed;
   bottom: 0;
 }
 
 @media (max-width: 768px) {
-  .meter {
+  .myAppContainer .meter {
     width: 100%;
   }
 
-  .notes {
+  .myAppContainer .notes {
     width: 100%;
   }
 }
 
-.swal-button {
+.myAppContainer .swal-button {
   background: #2c3e50;
 }
 
-.a4 {
+.myAppContainer .a4 {
   position: absolute;
   top: 16px;
   left: 16px;
 }
 
-.a4 span {
+.myAppContainer .a4 span {
   color: #e74c3c;
 }
 
-.auto {
+.myAppContainer .auto {
   position: absolute;
   top: 16px;
   right: 16px;
