@@ -78,10 +78,10 @@
 }
 
 .myAppContainer .meter {
-  position: fixed;
+  position: static;
   left: 0;
   right: 0;
-  bottom: 50%;
+  bottom: 70%;
   width: 400px;
   height: 33%;
   margin: 0 auto 5vh auto;
