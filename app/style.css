@@ -4,7 +4,7 @@ myAppContainer {
   color: #2c3e50;
   margin: 0;
   width: 100%;
-  height: 20%;
+  height: 80%;
   cursor: default;
   user-select: none;
 }
@@ -79,7 +79,7 @@ myAppContainer {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 70%;
+  top: 40%;
   width: 400px;
   height: 33%;
   margin: 0 auto 5vh auto;
