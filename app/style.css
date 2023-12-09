@@ -10,10 +10,11 @@ myAppContainer {
 }
 
 .myAppContainer .notes {
-  margin: 10vh auto;
+  margin: 40vh auto;
   width: 400px;
   position: relative;
   text-align: center;
+  line-height: 1;
 }
 
 .myAppContainer .note {
