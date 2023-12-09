@@ -1,5 +1,5 @@
 const Tuner = function (a4) {
-  this.middleA = a4 || 433;
+  this.middleA = a4 || 441;
   this.semitone = 69;
   this.bufferSize = 4096;
   this.noteStrings = [
