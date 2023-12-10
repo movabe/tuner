@@ -1,4 +1,4 @@
-var refreshTime = 300; // microseconds
+var refreshTime = 250; // microseconds
 var sensitivity = 2; // + and - interval
 
 function colorChange() {
@@ -20,16 +20,16 @@ function colorChange() {
   var minusElement = tunerContainer.querySelector('.minus');
 
   // Set the default color to white
-  plusElement.style.color = 'white';
-  minusElement.style.color = 'white';
+  plusElement.style.color = '#F3F3F3';
+  minusElement.style.color = '#F3F3F3';
 
   if (angle >= -sensitivity && angle <= sensitivity) {
-    tunerContainer.style.backgroundColor = '#F2FDF2';
+    tunerContainer.style.backgroundColor = '#d3ded3';
   } else if (angle < -sensitivity) {
-    plusElement.style.color = 'red';
+    plusElement.style.color = '#e74c3c';
     tunerContainer.style.backgroundColor = ''; // Reset background color
   } else if (angle > sensitivity) {
-    minusElement.style.color = 'red';
+    minusElement.style.color = '#e74c3c';
     tunerContainer.style.backgroundColor = ''; // Reset background color
   }
 }
