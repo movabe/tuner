@@ -24,7 +24,7 @@ function colorChange() {
   minusElement.style.color = 'white';
 
   if (angle >= -sensitivity && angle <= sensitivity) {
-    tunerContainer.style.backgroundColor = 'f0fff0';
+    tunerContainer.style.backgroundColor = '#F2FDF2';
   } else if (angle < -sensitivity) {
     plusElement.style.color = 'red';
     tunerContainer.style.backgroundColor = ''; // Reset background color
