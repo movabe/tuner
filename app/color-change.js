@@ -15,22 +15,19 @@ function colorChange() {
 
   // Apply styles directly to the elements
   var tunerContainer = document.querySelector('.tuner-container');
-  tunerContainer.style.backgroundColor = '';  // Reset background color
 
   var plusElement = tunerContainer.querySelector('.plus');
   var minusElement = tunerContainer.querySelector('.minus');
 
   if (angle >= -sensitivity && angle <= sensitivity) {
     plusElement.style.color = 'green';
-    minusElement.style.color = 'green';
+    minusElement.style.color = 'gray';
   } else if (angle < -sensitivity) {
     plusElement.style.color = 'gray';
     minusElement.style.color = 'red';
-    tunerContainer.style.backgroundColor = '#748291';
   } else if (angle > sensitivity) {
     plusElement.style.color = 'red';
     minusElement.style.color = 'gray';
-    tunerContainer.style.backgroundColor = '#748291';
   }
 }
 
