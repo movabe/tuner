@@ -22,7 +22,7 @@ FrequencyBars.prototype.update = function (data) {
     this.canvasContext.fillStyle = "#ecf0f1";
     this.canvasContext.fillRect(
       i * (width + 0.5),
-      this.$canvas.height - data[i],
+      this.$canvas.height - data[i] / 2,
       width,
       data[i]
     );
