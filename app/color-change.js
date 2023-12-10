@@ -19,15 +19,18 @@ function colorChange() {
   var plusElement = tunerContainer.querySelector('.plus');
   var minusElement = tunerContainer.querySelector('.minus');
 
+  // Set the default color to white
+  plusElement.style.color = 'white';
+  minusElement.style.color = 'white';
+
   if (angle >= -sensitivity && angle <= sensitivity) {
-    plusElement.style.color = 'green';
-    minusElement.style.color = 'gray';
+    tunerContainer.style.backgroundColor = 'green';
   } else if (angle < -sensitivity) {
-    plusElement.style.color = 'gray';
-    minusElement.style.color = 'red';
-  } else if (angle > sensitivity) {
     plusElement.style.color = 'red';
-    minusElement.style.color = 'gray';
+    tunerContainer.style.backgroundColor = ''; // Reset background color
+  } else if (angle > sensitivity) {
+    minusElement.style.color = 'red';
+    tunerContainer.style.backgroundColor = ''; // Reset background color
   }
 }
 
