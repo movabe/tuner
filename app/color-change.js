@@ -18,15 +18,19 @@ function colorChange() {
 
   var plusElement = tunerContainer.querySelector('.plus');
   var minusElement = tunerContainer.querySelector('.minus');
-
+  var plusImage = tunerContainer.querySelector('.plus-image');
+  var minusImage = tunerContainer.querySelector('.minus-image');
+  
   // Set the default color to white
   plusElement.style.color = '#F3F3F3';
   minusElement.style.color = '#F3F3F3';
+  plusImage.style.display = 'none'; // Hide plus image by default
+  minusImage.style.display = 'none'; // Hide minus image by default
 
   if (angle >= -sensitivity && angle <= sensitivity) {
     tunerContainer.style.backgroundColor = '#DFECDF';
-    plusElement.style.color = '#DFECDF';
-    minusElement.style.color = '#DFECDF';
+    plusImage.style.display = 'inline-block';
+    minusImage.style.display = 'inline-block';
   } else if (angle < -sensitivity) {
     plusElement.style.color = '#e74c3c';
     tunerContainer.style.backgroundColor = ''; // Reset background color
