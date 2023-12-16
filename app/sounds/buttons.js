@@ -3,7 +3,7 @@ const ButtonController = function() {
     'E': 7,
     'A': 0,
     'D': -7,
-    'G': -17,
+    'G': -14,
   };
   this.currentlyPlaying = null;
   this.initButtons();
