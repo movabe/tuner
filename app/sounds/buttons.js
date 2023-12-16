@@ -2,7 +2,7 @@ const ButtonController = function() {
   this.buttonToDiffMap = {
     'E': 7,
     'A': 0,
-    'D': -5,
+    'D': -7,
     'G': -12,
   };
   this.currentlyPlaying = null;
