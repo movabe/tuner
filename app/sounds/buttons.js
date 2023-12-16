@@ -1,9 +1,9 @@
 const ButtonController = function() {
   this.buttonToDiffMap = {
-    'E': 19,
-    'A': 12,
-    'D': 7,
-    'G': 2,
+    'E': 7,
+    'A': 0,
+    'D': -5,
+    'G': -17,
   };
   this.currentlyPlaying = null;
   this.initButtons();
@@ -19,14 +19,14 @@ ButtonController.prototype.initButtons = function() {
 ButtonController.prototype.addClickEvent = function(button, diffFromA) {
   button.addEventListener('click', (event) => {
     const noteValue = app.tuner.semitone + diffFromA;
-    
+
     // Stops playing note if this button is clicked again
     if (noteValue === this.currentlyPlaying) {
       app.tuner.stopOscillator();
       this.currentlyPlaying = null;
       return;
     }
-    
+
     const frequency = app.tuner.getStandardFrequency(noteValue);
     app.tuner.play(frequency);
     this.currentlyPlaying = noteValue;
