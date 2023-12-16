@@ -1,4 +1,4 @@
-var refreshTime = 250; // microseconds
+var refreshTime = 200; // microseconds
 var sensitivity = 1; // + and - interval
 
 function colorChange() {
