@@ -38,7 +38,7 @@ Application.prototype.start = function () {
 
   this.$a4.addEventListener("click", function () {
     swal
-      .fire({ input: "number", inputValue: self.a4 })
+      .fire({ input: "number", inputValue: self.a4, confirmButtonColor: '#1D201F' })
       .then(function ({ value: a4 }) {
         if (!parseInt(a4) || a4 === self.a4) {
           return;
