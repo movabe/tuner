@@ -22,8 +22,8 @@ function colorChange() {
   var minusImage = tunerContainer.querySelector('.minus-image');
   
   // Set the default color to white
-  plusElement.style.color = '#DFECDF';
-  minusElement.style.color = '#DFECDF';
+  plusElement.style.display = 'none'; 
+  minusElement.style.display = 'none'; 
   plusImage.style.display = 'none'; // Hide plus image by default
   minusImage.style.display = 'none'; // Hide minus image by default
 
@@ -32,9 +32,11 @@ function colorChange() {
     plusImage.style.display = 'inline-block';
     minusImage.style.display = 'inline-block';
   } else if (angle < -sensitivity) {
+    plusElement.style.display = 'inline-block';
     plusElement.style.color = '#e74c3c';
     tunerContainer.style.backgroundColor = ''; // Reset background color
   } else if (angle > sensitivity) {
+    minusElement.style.display = 'inline-block';
     minusElement.style.color = '#e74c3c';
     tunerContainer.style.backgroundColor = ''; // Reset background color
   }
