@@ -22,8 +22,8 @@ function colorChange() {
   var minusImage = tunerContainer.querySelector('.minus-image');
   
   // Set the default color to white
-  plusElement.style.color = '#F3F3F3';
-  minusElement.style.color = '#F3F3F3';
+  plusElement.style.color = '#DFECDF';
+  minusElement.style.color = '#DFECDF';
   plusImage.style.display = 'none'; // Hide plus image by default
   minusImage.style.display = 'none'; // Hide minus image by default
 
