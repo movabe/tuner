@@ -5,6 +5,7 @@ const ButtonController = function() {
     'D': 7,
     'G': 2,
   };
+  this.currentlyPlaying = null;
   this.initButtons();
 }
 
@@ -18,8 +19,17 @@ ButtonController.prototype.initButtons = function() {
 ButtonController.prototype.addClickEvent = function(button, diffFromA) {
   button.addEventListener('click', (event) => {
     const noteValue = app.tuner.semitone + diffFromA;
+    
+    // Stops playing note if this button is clicked again
+    if (noteValue === this.currentlyPlaying) {
+      app.tuner.stopOscillator();
+      this.currentlyPlaying = null;
+      return;
+    }
+    
     const frequency = app.tuner.getStandardFrequency(noteValue);
     app.tuner.play(frequency);
+    this.currentlyPlaying = noteValue;
 
     const note = {
       'name': button.getAttribute('data-note'),
