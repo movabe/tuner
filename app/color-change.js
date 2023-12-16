@@ -2,7 +2,7 @@ var refreshTime = 200; // microseconds
 var sensitivity = 1; // + and - interval
 
 function colorChange() {
-  var el = document.querySelector(".tuner-container .meter-pointer");
+  var el = document.querySelector(".tuner-app .meter-pointer");
   var st = window.getComputedStyle(el, null);
   var tr = st.getPropertyValue("transform") || "FAIL";
 
@@ -14,7 +14,7 @@ function colorChange() {
   var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
 
   // Apply styles directly to the elements
-  var tunerContainer = document.querySelector('.tuner-container');
+  var tunerContainer = document.querySelector('.tuner-app');
 
   var plusElement = tunerContainer.querySelector('.plus');
   var minusElement = tunerContainer.querySelector('.minus');
