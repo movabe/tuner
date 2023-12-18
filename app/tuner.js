@@ -144,18 +144,18 @@ Tuner.prototype.getCents = function (frequency, note) {
  *
  * @param {number} frequency
  */
-Tuner.prototype.play = function (frequency) {
-  if (!this.oscillator) {
-    this.oscillator = this.audioContext.createOscillator();
-    this.oscillator.connect(this.audioContext.destination);
-    this.oscillator.start();
-  }
-  this.oscillator.frequency.value = frequency;
-};
+//Tuner.prototype.play = function (frequency) {
+//  if (!this.oscillator) {
+//    this.oscillator = this.audioContext.createOscillator();
+//    this.oscillator.connect(this.audioContext.destination);
+//    this.oscillator.start();
+//  }
+//  this.oscillator.frequency.value = frequency;
+//};
 
-Tuner.prototype.stopOscillator = function () {
-  if (this.oscillator) {
-    this.oscillator.stop();
-    this.oscillator = null;
-  }
-};
+//Tuner.prototype.stopOscillator = function () {
+//  if (this.oscillator) {
+//    this.oscillator.stop();
+//    this.oscillator = null;
+//  }
+//};
