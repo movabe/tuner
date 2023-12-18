@@ -34,4 +34,3 @@ class CustomButtonController extends ButtonController {
     });
   }
 }
-new CustomButtonController();
