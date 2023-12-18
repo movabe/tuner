@@ -27,6 +27,7 @@ class CustomButtonController extends ButtonController {
       }
 
       const frequency = app.tuner.getStandardFrequency(noteValue);
+      console.log(`Playing frequency: ${frequency} at volume: ${volume}`);
       app.tuner.play(frequency, volume);
       this.currentlyPlaying = noteValue;
 
