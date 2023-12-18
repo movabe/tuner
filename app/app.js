@@ -78,5 +78,6 @@ Application.prototype.update = function (note) {
   this.meter.update((note.cents / 50) * 45);
 };
 
-const app = new Application();
+//const app = new Application();
+const app = new Application(new CustomTuner());
 app.start();
