@@ -1,4 +1,10 @@
 class CustomButtonController extends ButtonController {
+  // Constructor that calls the parent constructor
+  constructor() {
+    super();
+  }
+
+  // Overriding the original addClickEvent method
   addClickEvent(button, diffFromA) {
     button.addEventListener('click', (event) => {
       const noteValue = app.tuner.semitone + diffFromA;
@@ -10,8 +16,10 @@ class CustomButtonController extends ButtonController {
         'G': 0.6,
       };
 
+      // Get volume from volume map
       const volume = volumeMap[button.getAttribute('data-note')];
 
+       // Stops playing note if this button is clicked again
       if (noteValue === this.currentlyPlaying) {
         app.tuner.stopOscillator();
         this.currentlyPlaying = null;
@@ -27,10 +35,13 @@ class CustomButtonController extends ButtonController {
         'frequency': frequency,
         'octave': Math.floor(noteValue / 12) - 1,
         'value': noteValue,
-        'cents': 0 
+        'cents': 0,
       };
       
       app.update(note);
     });
   }
 }
+
+// Create an instance of the new CustomButtonController
+new CustomButtonController();
