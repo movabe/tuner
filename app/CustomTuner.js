@@ -11,6 +11,7 @@ class CustomTuner extends Tuner {
     
     this.oscillator.frequency.value = frequency;
     this.gainNode.gain.value = volume;
+    console.log(this.audioContext.state)
   }
     
   stopOscillator() {
