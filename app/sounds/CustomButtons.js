@@ -10,7 +10,7 @@ class CustomButtonController extends ButtonController {
       const noteValue = app.tuner.semitone + diffFromA;
 
       const volumeMap = {
-        'E': 0.1,
+        'E': 0.0,
         'A': 0.9,
         'D': 0.8,
         'G': 0.8,
